@@ -12,7 +12,7 @@
   .dot-grid{background-image:radial-gradient(rgba(255,255,255,0.35) 1px, transparent 1px);background-size:18px 18px;}
 </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body id="top" class="bg-slate-50 text-slate-900">
 
 <!-- LOGO NOTE: this is a simple SVG shape-based wordmark for launch. For a polished
      custom brand logo, try Canva's free logo maker, Looka, or a Fiverr designer. -->
@@ -293,6 +293,11 @@
   <p class="text-center text-xs text-slate-500 mt-8">© 2026 We Shine Cleaners. All rights reserved.</p>
 </footer>
 
+<!-- Back to top: fixed bottom-right, icon-only, hidden until the user scrolls down -->
+<button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 h-12 w-12 rounded-full bg-sky-700 text-white shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 hover:bg-sky-800">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+</button>
+
 <script>
   // Mobile nav toggle
   const navToggle = document.getElementById('nav-toggle');
@@ -328,6 +333,19 @@
     }
     success.classList.remove('hidden');
     form.reset();
+  });
+
+  // Back to top: reveal after scrolling past the hero, scroll smoothly to top on click
+  const backToTop = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.remove('opacity-0', 'pointer-events-none');
+    } else {
+      backToTop.classList.add('opacity-0', 'pointer-events-none');
+    }
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
 
