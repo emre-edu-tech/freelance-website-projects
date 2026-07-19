@@ -264,10 +264,22 @@
 
 <!-- QUOTE FORM -->
 <section id="quote" class="scroll-mt-20 bg-white border-t border-slate-100 py-16 lg:py-24">
-  <div class="max-w-xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center">Get your free quote</h2>
+  <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-start">
+    <div class="text-center lg:text-left">
+      <h2 class="text-3xl font-bold">Get your free quote</h2>
+      <p class="mt-4 text-slate-600 leading-relaxed">Request a free, no-obligation quote for house cleaning, deep cleaning, or move-in/move-out cleaning in Phoenix, AZ. Fill out the form and our team will follow up within one business day with pricing and available time slots — no account or payment required to get an estimate.</p>
+      <div class="mt-6 flex items-center gap-3 justify-center lg:justify-start bg-sky-50 border border-sky-100 rounded-xl px-5 py-4">
+        <a href="tel:+16025550123" aria-label="Call We Shine Cleaners at (602) 555-0123" title="(602) 555-0123" class="h-10 w-10 shrink-0 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center hover:bg-sky-200 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.05 11.05 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        </a>
+        <p class="text-sm text-slate-700 text-left">
+          Prefer to talk it through, or having trouble with the form?<br>
+          Call us at <a href="tel:+16025550123" class="text-sky-700 font-semibold hover:underline">(602) 555-0123</a> and we'll get your quote started over the phone.
+        </p>
+      </div>
+    </div>
     <!-- NOTE: no backend wired up — connect this form to your booking/email system -->
-    <form id="quote-form" class="mt-8 space-y-4 bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm" novalidate>
+    <form id="quote-form" class="space-y-4 bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm" novalidate>
       <div>
         <label for="name" class="block text-sm font-medium mb-1">Name</label>
         <input id="name" name="name" required class="w-full border border-slate-300 rounded-lg px-4 py-2.5">
